@@ -55,7 +55,7 @@ public class CarritoDeMercado {
 
     public  boolean sacar(Producto producto){
         Producto p = buscar(producto.getNombre(),producto.getTipo());
-        if (p == null){
+        if (p != null){
             this.productos.remove(producto);
             return true;
         } else {
