@@ -41,6 +41,27 @@ public class CarritoDeMercado {
 
     }
 
+    /*
+
+    BUSCAR POR TIPO "PRUEBA"
+
+    public  Producto buscarTipo(List tipo){
+
+        Producto productoBuscado = null;
+
+        for (Producto producto: this.productos) {
+            if (producto.getTipo().equalsIgnoreCase(producto.getTipo())) {
+                productoBuscado = producto;
+                break;
+            }
+        }
+
+        return productoBuscado;
+
+    }
+
+     */
+
     public boolean agregar(Producto producto){
 
         if (this.productos.size() < CAPACIDAD) {
