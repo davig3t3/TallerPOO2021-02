@@ -62,6 +62,8 @@ public class CarritoDeMercado {
 
      */
 
+
+
     public boolean agregar(Producto producto){
 
         if (this.productos.size() < CAPACIDAD) {
