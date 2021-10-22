@@ -13,7 +13,7 @@ public class Promotor extends Empleado {
     }
 
     @Override
-    protected long calcularSalario() {
+    public long calcularSalario() {
         return (volantesRepartidos*valorVolante)+(comprasVolante*17000);
     }
 }

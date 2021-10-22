@@ -13,15 +13,15 @@ public class Vendedor extends Directo {
     public long calcularComision(){
         long saldo=0;
         if (salario>=999999){
-            saldo=(long)(VentaDelMes*0.05);
-        }else{
             saldo=(long)(VentaDelMes*0.045);
+        }else{
+            saldo=(long)(VentaDelMes*0.055);
         }
         return saldo;
     }
 
     @Override
-    protected long calcularSalario() {
+    public long calcularSalario() {
 
         return this.salario+calcularComision()-(calcularPension()+calcularSalud());
     }
