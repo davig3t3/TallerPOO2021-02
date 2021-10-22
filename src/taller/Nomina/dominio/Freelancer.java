@@ -10,7 +10,7 @@ public class Freelancer extends Empleado{
     }
 
     @Override
-    protected long calcularSalario() {
+    public long calcularSalario() {
         return valorHora*horasTrabajadas;
     }
 

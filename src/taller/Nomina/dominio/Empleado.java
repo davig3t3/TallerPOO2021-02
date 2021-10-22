@@ -9,6 +9,6 @@ public abstract class Empleado {
     public Empleado(String nombre){
         this.nombre=nombre;
     }
-    protected abstract long calcularSalario();
+    public abstract long calcularSalario();
 
 }

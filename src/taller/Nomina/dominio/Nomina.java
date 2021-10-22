@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class Nomina {
     private ArrayList<Empleado> empleados=new ArrayList<>();
-    Empleado juan=new Directo("Juan",5360000);
-    Empleado julian=new Vendedor("Julian",2450000,55510000);
-    Empleado johanna=new Freelancer("Johanna",76000,85);
-    Empleado carolina=new Vendedor("Carolina",990000,62487000);
-    Empleado david=new Directo("David",2895000);
-    Empleado gustavo=new Freelancer("Gustavo",52500,60);
-    Empleado pedro=new Promotor("Pedro",15000,250,48);
+    Empleado juan=new Directo("Juan",6812000);
+    Empleado julian=new Vendedor("Julian",2410000,62106200);
+    Empleado johanna=new Freelancer("Johanna",120000,79);
+    Empleado carolina=new Vendedor("Carolina",998000,71589600);
+    Empleado david=new Directo("David",3578000);
+    Empleado gustavo=new Freelancer("Gustavo",70500,64);
+    Empleado pedro=new Promotor("Pedro",974,190,68);
 
     public long consultarNomina(){
         long nominas= empleados.stream().mapToLong(Empleado::calcularSalario).sum();
