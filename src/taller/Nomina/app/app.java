@@ -24,6 +24,7 @@ public class app {
         nomina.getEmpleados().add(gustavo);
         nomina.getEmpleados().add(pedro);
 
+
         nomina.getEmpleados().forEach(nominaactual->{StringBuilder vistaso = new StringBuilder();
             vistaso.append(nominaactual.getNombre()).append("  el salario es  : ").append(nominaactual.calcularSalario());
             System.out.println(vistaso);
