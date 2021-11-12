@@ -27,12 +27,7 @@ public class Biblioteca {
                 ((Prestable)r).prestar();
                 return true;
             }else {
-                recursos.forEach(recurso -> {
-                    if(recurso.isPrestado()){
-                        System.out.println("El articulo ya se encuentra prestado: "+recurso.getNombre());
-                    }
-                });
-                //System.out.println("El articulo ya se encuentra prestado");
+                System.out.println("El articulo ya se encuentra prestado");
                 return false;
             }
         }else{
