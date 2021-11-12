@@ -8,7 +8,7 @@ public class MapaMundi extends Recurso implements Copiable{
 
     @Override
     public void fotocopiar() {
-        copias=getCopias()+1;
+        copias+=1;
     }
 
     @Override

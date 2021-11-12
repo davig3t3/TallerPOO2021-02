@@ -75,11 +75,10 @@ public class Biblioteca {
 
         AtomicInteger cantidadPrestados = new AtomicInteger();
 
-        recursos.forEach(recurso -> {
-            if(recurso.isPrestado()){
+        recursos.stream().filter(r -> r instanceof Prestable).forEach(recurso -> {
+           
                 cantidadPrestados.incrementAndGet();
                 System.out.println("Los prestados son: " + recurso.getNombre());
-            }
         });
 
         System.out.println("La cantidad de prestados es: " + cantidadPrestados);
