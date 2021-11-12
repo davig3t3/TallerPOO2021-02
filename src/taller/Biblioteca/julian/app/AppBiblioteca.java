@@ -1,9 +1,9 @@
-package taller.Biblioteca.app;
+package taller.Biblioteca.julian.app;
 
-import taller.Biblioteca.dominio.Biblioteca;
-import taller.Biblioteca.dominio.Libro;
-import taller.Biblioteca.dominio.Revista;
-import taller.Biblioteca.dominio.Tesis;
+import taller.Biblioteca.julian.dominio.Biblioteca;
+import taller.Biblioteca.julian.dominio.Libro;
+import taller.Biblioteca.julian.dominio.Revista;
+import taller.Biblioteca.julian.dominio.Tesis;
 
 public class AppBiblioteca {
     public static void main(String[] args) {

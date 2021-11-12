@@ -1,4 +1,4 @@
-package taller.Biblioteca.dominio;
+package taller.Biblioteca.julian.dominio;
 
 public abstract class Recurso {
     protected boolean prestado;

@@ -1,19 +1,20 @@
-package taller.Biblioteca.dominio;
+package taller.Biblioteca.julian.dominio;
 
-public class MapaMundi extends Recurso implements Copiable{
+public class Tesis extends Recurso implements Copiable{
 
-    public MapaMundi(boolean prestado, String nombre, int copias) {
+
+    public Tesis(boolean prestado, String nombre, int copias) {
         super(prestado, nombre, copias);
     }
 
     @Override
     public void fotocopiar() {
-        copias+=1;
+        copias=getCopias()+1;
     }
 
     @Override
     public String toString() {
-        return "MapaMundi{" +
+        return "Tesis{" +
                 "prestado=" + prestado +
                 ", copias=" + copias +
                 '}';

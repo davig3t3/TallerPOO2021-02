@@ -1,8 +1,9 @@
-package taller.Biblioteca.dominio;
+package taller.Biblioteca.julian.dominio;
 
-public class Comic extends Recurso implements Prestable{
+public class Libro extends Recurso implements Prestable,Copiable{
 
-    public Comic(boolean prestado, String nombre, int copias) {
+
+    public Libro(boolean prestado, String nombre, int copias) {
         super(prestado, nombre, copias);
     }
 
@@ -18,8 +19,13 @@ public class Comic extends Recurso implements Prestable{
     }
 
     @Override
+    public void fotocopiar() {
+        copias=getCopias()+1;
+    }
+
+    @Override
     public String toString() {
-        return "Comic{" +
+        return "Libro{" +
                 "prestado=" + prestado +
                 ", copias=" + copias +
                 '}';

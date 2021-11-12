@@ -1,7 +1,9 @@
-package taller.Biblioteca.dominio;
+package taller.Biblioteca.julian.dominio;
 
-public class Diccionario extends Recurso implements Prestable{
-    public Diccionario(boolean prestado, String nombre, int copias) {
+public class Revista extends Recurso implements Prestable{
+
+
+    public Revista(boolean prestado, String nombre, int copias) {
         super(prestado, nombre, copias);
     }
 
@@ -18,7 +20,7 @@ public class Diccionario extends Recurso implements Prestable{
 
     @Override
     public String toString() {
-        return "Diccionario{" +
+        return "Revista{" +
                 "prestado=" + prestado +
                 ", copias=" + copias +
                 '}';
