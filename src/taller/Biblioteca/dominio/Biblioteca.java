@@ -56,6 +56,21 @@ public class Biblioteca {
         }
     }
 
+    public boolean fotocopiarRecurso(Recurso r){
+        if (r instanceof Prestable){
+            if (r.getCopias()>0 && r.isPrestado()==false){
+                ((Copiable)r).fotocopiar();
+                return true;
+            }else {
+                System.out.println("El articulo se ha fotocopiado");
+                return false;
+            }
+        }else{
+            System.out.println("Es un articulo fotocopiable");
+            return false;
+        }
+    }
+
     public void listarPrestados(){
 
         AtomicInteger cantidadPrestados = new AtomicInteger();
@@ -68,6 +83,21 @@ public class Biblioteca {
         });
 
         System.out.println("La cantidad de prestados es: " + cantidadPrestados);
+
+    }
+
+    public void listarCopiasPorCurso(){
+
+        AtomicInteger cantidadCopiados = new AtomicInteger();
+
+        recursos.forEach(recurso -> {
+            if(recurso.getCopias()>0){
+                cantidadCopiados.incrementAndGet();
+                System.out.println("Los fotocopiados son: " + recurso.getNombre()+" Su cantidad de copias es: "+ recurso.getCopias());
+            }
+        });
+
+        System.out.println("La cantidad de fotocopiados es: " + cantidadCopiados);
 
     }
 

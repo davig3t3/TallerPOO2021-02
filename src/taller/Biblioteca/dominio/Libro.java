@@ -1,8 +1,10 @@
 package taller.Biblioteca.dominio;
 
-public class Libro extends Recurso implements Prestable{
-    public Libro(boolean prestado, String nombre) {
-        super(prestado, nombre);
+public class Libro extends Recurso implements Prestable,Copiable{
+
+
+    public Libro(boolean prestado, String nombre, int copias) {
+        super(prestado, nombre, copias);
     }
 
     @Override
@@ -15,4 +17,10 @@ public class Libro extends Recurso implements Prestable{
 
         prestado=false;
     }
+
+    @Override
+    public void fotocopiar() {
+        copias=getCopias();
+    }
+
 }
