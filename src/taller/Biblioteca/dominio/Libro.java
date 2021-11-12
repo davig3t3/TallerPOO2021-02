@@ -20,7 +20,14 @@ public class Libro extends Recurso implements Prestable,Copiable{
 
     @Override
     public void fotocopiar() {
-        copias=getCopias();
+        copias=getCopias()+1;
     }
 
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "prestado=" + prestado +
+                ", copias=" + copias +
+                '}';
+    }
 }

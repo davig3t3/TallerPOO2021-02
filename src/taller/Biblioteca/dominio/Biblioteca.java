@@ -57,8 +57,8 @@ public class Biblioteca {
     }
 
     public boolean fotocopiarRecurso(Recurso r){
-        if (r instanceof Prestable){
-            if (r.getCopias()>0 && r.isPrestado()==false){
+        if (r instanceof Copiable){
+            if (r.isPrestado()==false){
                 ((Copiable)r).fotocopiar();
                 return true;
             }else {

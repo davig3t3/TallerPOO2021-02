@@ -1,9 +1,8 @@
 package taller.Biblioteca.dominio;
 
-public class Revista extends Recurso implements Prestable{
+public class Comic extends Recurso implements Prestable{
 
-
-    public Revista(boolean prestado, String nombre, int copias) {
+    public Comic(boolean prestado, String nombre, int copias) {
         super(prestado, nombre, copias);
     }
 
@@ -20,7 +19,7 @@ public class Revista extends Recurso implements Prestable{
 
     @Override
     public String toString() {
-        return "Revista{" +
+        return "Comic{" +
                 "prestado=" + prestado +
                 ", copias=" + copias +
                 '}';

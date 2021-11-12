@@ -1,9 +1,8 @@
 package taller.Biblioteca.dominio;
 
-public class Tesis extends Recurso implements Copiable{
+public class MapaMundi extends Recurso implements Copiable{
 
-
-    public Tesis(boolean prestado, String nombre, int copias) {
+    public MapaMundi(boolean prestado, String nombre, int copias) {
         super(prestado, nombre, copias);
     }
 
@@ -14,7 +13,7 @@ public class Tesis extends Recurso implements Copiable{
 
     @Override
     public String toString() {
-        return "Tesis{" +
+        return "MapaMundi{" +
                 "prestado=" + prestado +
                 ", copias=" + copias +
                 '}';
