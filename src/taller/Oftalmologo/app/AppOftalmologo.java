@@ -13,6 +13,7 @@ public class AppOftalmologo {
         PacienteApto pacienteApto2 = new PacienteApto("Miguel",60,false);
         PacienteNoApto pacienteNoApto2 = new PacienteNoApto("Sara",23,true);
 
+        oftalmologo.addPaciente(pacienteApto,pacienteApto2,pacienteNoApto,pacienteNoApto2);
         oftalmologo.revisarPaciente(pacienteApto);
         oftalmologo.revisarPaciente(pacienteNoApto);
         oftalmologo.revisarPaciente(pacienteApto2);
