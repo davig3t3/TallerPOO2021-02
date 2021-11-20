@@ -2,7 +2,6 @@ package taller.Oftalmologo.dominio;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
@@ -10,7 +9,7 @@ public class Oftalmologo {
     private String nombre;
     private List<Paciente> pacientes;
     private List<PacienteApto> pacienteAptos;
-    public static final int EDAD_MAX = 40;
+    public static final int EDAD_MAX = 60;
 
     public Oftalmologo(String nombre) {
         this.nombre = nombre;
@@ -27,29 +26,29 @@ public class Oftalmologo {
      */
 
     public Paciente revisarPaciente(String nombre, int edad) {
-
-
         Paciente paciente = null;
 
         if (nombre.toLowerCase(Locale.ROOT).contains("a")) {
             System.out.println(paciente.getNombre() + " Necesita cirugia");
-        }
-        if (nombre.toLowerCase(Locale.ROOT).contains("a") && edad < EDAD_MAX) {
-            System.out.println(paciente.getNombre() + " El paciente es apto");
-            paciente = new PacienteApto(nombre, edad, true);
-            pacientes.add(paciente);
+            if (edad < EDAD_MAX) {
+                System.out.println(paciente.getNombre() + " El paciente es apto");
+                paciente = new PacienteApto(nombre, edad, true, "0/0");
+            } else {
+                paciente = new PacienteNoApto(nombre, edad, true, "0/0");
+            }
         } else {
             System.out.println(paciente.getNombre() + " El paciente no cumple con los requisitos para ser operado");
-            paciente = new PacienteNoApto(nombre, edad, false);
+            paciente = new PacienteNoApto(nombre, edad, false, "20/20");
         }
 
+        pacientes.add(paciente);
         return paciente;
     }
 
 
     public void operarPacientes() {
 
-        pacientes.stream().filter(p -> p instanceof Operable).forEach(paciente -> {
+        pacientes.stream().filter(p -> p instanceof Operable && p.isNecesitaCirugia()).forEach(paciente -> {
             ((Operable) paciente).operar();
         });
 
@@ -67,7 +66,7 @@ public class Oftalmologo {
 
     }
 
-    public void getPacientesAOperar() {
+    public List<PacienteApto> getPacientesAOperar() {
 
         pacientes.stream().filter(p -> p instanceof Operable).forEach(paciente -> {
             if (paciente.isNecesitaCirugia() == false) {
@@ -78,6 +77,8 @@ public class Oftalmologo {
             }
             System.out.println("Los pacientes que seran intervenidos son: " + paciente.getNombre());
         });
+
+        return pacienteAptos;
 
     }
 
